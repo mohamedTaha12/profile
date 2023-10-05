@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="container-fluid animate__animated animate__fadeIn">
+    <div class="fir-sec row d-flex justify-content-between align-items-center">
+        <div class="col-md-4 m-auto">
+            <h3 class="mb-2 text-secondary fw-bold">HELLO, MY NAME IS
+            </h3>
+            <!-- <hr> -->
+            <h1 class="mt-4 fs-1 text-info" style="font-family: cursive;">Mohamed Taha</h1>
+            <h2 class="text-info">Front-End Developer</h2>
+            <p class="fs-6">Freelancer providing services for web developing, programming, and IT needs.
+
+                Join me down below and let's get cracking!</p>
+            <div class="info-1 flex justify-content-center my-5">
+                <p-overlayPanel #op [style]="{'background-color':'azure'}">
+                    <ng-template pTemplate="content">
+                        <app-information></app-information>
+                    </ng-template>
+                </p-overlayPanel>
+                <p-button (click)="op.toggle($event)" icon="pi pi-info-circle" label="Show information"
+                    styleClass="p-button-success"></p-button>
+            </div>
+            <div class="info-2 my-5 text-center" style="display: none">
+                <p-button styleClass="p-button-success" (onClick)="infoShowing()" icon="pi pi-info-circle"
+                    label="Show information"></p-button>
+                <app-information class="animate__animated animate__fadeIn"
+                    [ngClass]="{'d-none':isInfoShowing}"></app-information>
+            </div>
+
+        </div>
+        <div class="col-md-6 ">
+            <img style="max-width: 90%;" src="../../../assets/images/home-profile.png" alt="">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- <div class="pt-5 sc-sec container mx-5">
+    <div class="about-me mb-5">
+        <h3 class="text-info">About me</h3>
+        <p class="h1 fs-1 fw-bold">I am an enthusiastic web developer based in New York, with a rich experience of
+            over 6 years in
+            website &
+            product design.</p>
+    </div>
+    <div class="mt-5 row d-flex justify-content-between">
+        <div class="mb-3 col-md-4">
+            <span class="h1 fs-4 text-info fs-5 fw-bold">I design professional & beautiful websites</span>
+        </div>
+        <div class="col-md-7 h5">
+            <p>With years of experience in graphic and web design I have mastered the skills of understanding client
+                requirements according to the latest trends. I have worked with businesses from different niches so you
+                can
+                rely on me for yours. <br><br><br>
+                <span class="text-secondary">
+                    I’ve spent most of these years working across different areas of design like front-end development,
+                    landing
+                    pages, email design, app UI/UX, to my current role designing products for mobile platforms. Having
+                    worked on
+                    various projects that are already live, I can help you with the best possible suggestions and ideas
+                    that
+                    we
+                    can proceed with. With me, you aren’t forced to accept anything. I give you a variety of options we
+                    can
+                    work
+                    on together.
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="pt-5 thd-sec container mx-5">
+    <div class="row d-flex justify-content-between">
+        <div class="col-md-6 ps-5">
+            <h1 class="fs-1 fw-bold my-5">What I do</h1>
+            <span class="text-secondary">
+                From understanding your requirements, designing a blueprint and delivering the final product, I do
+                everything
+                that falls in between these lines.
+            </span>
+
+        </div>
+        <div class="col-md-4">
+            <i class="fs-1 text-info bi bi-arrow-right h1"></i>
+        </div>
+    </div>
+</div> -->

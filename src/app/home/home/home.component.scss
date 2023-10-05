@@ -1,0 +1,48 @@
+.fir-sec {
+    div {
+
+        h1 {
+            font-family: sans-serif;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+
+// @keyframes slideInFromLeft {
+//     0% {
+//         margin: 10px;
+//     }
+
+//     100% {
+//         margin: 20px;
+//     }
+
+//     50% {
+//         margin: 30px;
+
+//     }
+// }
+
+img {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .container-fluid {
+        text-align: center;
+        margin-top: 50px !important;
+    }
+
+    .info-1 {
+        display: none !important;
+    }
+
+    .info-2 {
+        display: block !important;
+    }
+}
