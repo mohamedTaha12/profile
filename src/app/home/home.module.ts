@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ButtonModule } from 'primeng/button';
-
+import { StyleClassModule } from 'primeng/styleclass';
 @NgModule({
   declarations: [
     HomeComponent
@@ -16,7 +16,8 @@ import { ButtonModule } from 'primeng/button';
     HomeRoutingModule,
     SharedModule,
     OverlayPanelModule,
-    ButtonModule
+    ButtonModule,
+    StyleClassModule
   ], exports: [
     HomeComponent
   ]
