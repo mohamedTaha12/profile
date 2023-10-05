@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   linkId: number = 1
   menu!: boolean
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
   ngOnInit(): void {
 
   }
@@ -18,5 +21,8 @@ export class NavbarComponent implements OnInit {
   }
   removeMenu() {
     this.menu = false
+  }
+  navigateTo(url: string) {
+    this.router.navigate([url])
   }
 }
