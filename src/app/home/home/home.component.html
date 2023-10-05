@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <div class="container-fluid animate__animated animate__fadeIn">
     <div class="fir-sec row d-flex justify-content-between align-items-center">
         <div class="col-md-4 m-auto">
@@ -19,7 +19,7 @@
                 <p-button (click)="op.toggle($event)" icon="pi pi-info-circle" label="Show information"
                     styleClass="p-button-success"></p-button>
             </div>
-            <div class="info-2 my-5 text-center" style="display: none">
+            <div class="info-2 my-5 text-center animate__animated animate__fadeIn" style="display: none">
                 <p-button styleClass="p-button-success" (onClick)="infoShowing()" icon="pi pi-info-circle"
                     label="Show information" [ngClass]="{'d-none':!isInfoShowing}"></p-button>
                 <p-button styleClass="p-button-success" (onClick)="infoShowing()" icon="pi pi-info-circle"
