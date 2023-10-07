@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent {
-
+export class AboutComponent implements AfterViewInit {
+  constructor(
+    private spinner: NgxSpinnerService
+  ) {
+    this.spinner.show()
+  }
+  ngAfterViewInit() {
+    this.spinner.hide()
+  }
 }
