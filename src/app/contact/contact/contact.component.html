@@ -1,27 +1,28 @@
 <div class="container">
     <h1 class="text-center text-info fw-bold fs-1">Let's get in touch</h1>
-    <h1 class="text-center text-secondary fw-bold fs-3">Contact Me</h1>
     <div class="row justify-content-between my-5">
         <div class="col-md-5">
             <img style="max-width: 89%;" src="assets/images/contact.png" alt="contact">
         </div>
-        <div class="col-md-6 py-2">
-            <form>
+        <div class="card col-md-6 px-5 py-4 bg-info text-white">
+            <form [formGroup]="formData">
+                <h1 class="text-center text-white fw-bold fs-3">Contact Me</h1>
+
                 <!-- Name input -->
                 <div class="form-outline mb-4">
-                    <input type="text" id="form4Example1" class="form-control" />
+                    <input formControlName="name" type="text" id="form4Example1" class="form-control" />
                     <label class="form-label" for="form4Example1">Name</label>
                 </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="email" id="form4Example2" class="form-control" />
+                    <input formControlName="email" type="email" id="form4Example2" class="form-control" />
                     <label class="form-label" for="form4Example2">Email address</label>
                 </div>
 
                 <!-- Message input -->
                 <div class="form-outline mb-4">
-                    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                    <textarea formControlName="message" class="form-control" id="form4Example3" rows="4"></textarea>
                     <label class="form-label" for="form4Example3">Message</label>
                 </div>
 
@@ -34,7 +35,8 @@
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4 fs-5">Send</button>
+                <button (click)="sendMessage()" [disabled]="formData.invalid" type="submit"
+                    class="btn btn-primary btn-block mb-4 fs-5">Send</button>
             </form>
         </div>
     </div>
