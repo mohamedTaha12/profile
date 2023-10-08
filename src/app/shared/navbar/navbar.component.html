@@ -9,20 +9,20 @@
         <div class="collapse navbar-collapse me-5 justify-content-end" [ngClass]="{'remove-menu' : menu}"
             id="navbarSupportedContent">
             <ul class="navbar-nav mb-lg-0">
-                <li class="nav-item mx-3" (click)="navigateTo('/home')" id="1" (click)="addClass(1)">
+                <li class="nav-item mx-3" id="1" (click)="navigateTo(1, 'home')">
                     <a class="nav-link" [ngClass]="{'active': linkId === 1 }">HOME</a>
                 </li>
-                <li class="nav-item mx-3" (click)="navigateTo('/about')" id="2" (click)="addClass(2)">
+                <li class="nav-item mx-3" id="2" (click)="navigateTo(2, 'about')">
                     <a class="nav-link" [ngClass]="{'active': linkId === 2 }">ABOUT</a>
                 </li>
 
-                <li class="nav-item mx-3" id="3" (click)="addClass(3)">
+                <li class="nav-item mx-3" id="3" (click)="navigateTo(3, '')">
                     <a class="nav-link" [ngClass]="{'active': linkId === 3 }">SERVICES</a>
                 </li>
-                <li class="nav-item mx-3" id="4" (click)="addClass(4)">
+                <li class="nav-item mx-3" id="4" (click)="navigateTo(4, '')">
                     <a class="nav-link" [ngClass]="{'active': linkId === 4 }">PORTFOLIO</a>
                 </li>
-                <li class="nav-item mx-3" id="5" (click)="addClass(5)">
+                <li class="nav-item mx-3" id="2" (click)="navigateTo(5, 'contact')">
                     <a class="nav-link" [ngClass]="{'active': linkId === 5 }">CONTACT</a>
                 </li>
 

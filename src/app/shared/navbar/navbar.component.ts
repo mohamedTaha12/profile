@@ -15,14 +15,16 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  addClass(id: any) {
-    this.linkId = id;
-    this.menu = true
+  addClass() {
+
+
   }
   removeMenu() {
     this.menu = false
   }
-  navigateTo(url: string) {
+  navigateTo(id: number, url: string) {
+    this.linkId = id;
+    this.menu = true;
     this.router.navigate([url])
   }
 }

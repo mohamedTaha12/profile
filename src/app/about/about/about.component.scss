@@ -1,7 +1,20 @@
+@keyframes mymove {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+
+    }
+}
+
 .skills {
     span {
         img {
+            animation: 1.5s linear forwards mymove;
             max-width: 50%;
+            cursor: pointer;
         }
     }
 
