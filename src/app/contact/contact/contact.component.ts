@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +11,8 @@ export class ContactComponent implements OnInit {
   formData!: FormGroup
   constructor(
     private fb: FormBuilder,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService
   ) {
 
   }
@@ -25,7 +26,16 @@ export class ContactComponent implements OnInit {
       message: ['', [Validators.required]],
     })
   }
-  sendMessage() {
-    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Your message has been received successfully. Thank you ' + this.formData.value['name'] });
+  sendMessage(event: Event) {
+    this.confirmationService.confirm({
+      target: event.target as EventTarget,
+      message: 'Are you sure you sent the message?',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Your message has been received successfully. Thank you ' + this.formData.value['name'] });
+      },
+
+    });
   }
+
 }

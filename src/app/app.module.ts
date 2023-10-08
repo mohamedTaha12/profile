@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { ToastModule } from 'primeng/toast';
     NgxSpinnerModule,
     ToastModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
